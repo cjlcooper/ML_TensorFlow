@@ -2,6 +2,7 @@
 
 ### Session
 #### 会话持有并管理tensorflow程序运行时的所有资源
+#### PS:所有计算均要用session.run(...)方法执行
 
 ### Tensor
 #### 在Tensorflow中，所有的数据都通过张量的形式表示:
@@ -16,7 +17,6 @@
 
 ### Variable
 #### 变量：保存和更新网络中的参数
-
 
 ### 创建tf矩阵
 1.tf.zeros<br/>
