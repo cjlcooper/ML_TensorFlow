@@ -25,7 +25,17 @@ def tfVariable():
 	R = tf.Variable(tf.random_normal([2,3],mean=1,stddev=2))
 	print R
 
+# Math function
+def mathFunction():
+	a = tf.constant(10)
+	b = tf.constant(32)
+	with tf.Session() as sess:
+		print 'a = 10,b = 32'
+		print 'Addition with constants: %i' % sess.run(a+b)
+		print 'Multiplication with constants %i' % sess.run(a*b)
+
 
 #addTensor()
-tfSession()
+#tfSession()
 #tfVariable()
+mathFunction()
