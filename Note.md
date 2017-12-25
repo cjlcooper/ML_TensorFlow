@@ -23,3 +23,7 @@
 2.tf.ones<br/>
 3.tf.fill<br/>
 4.tf.constant<br/>
+
+### Others
+1.通过tf.constant创建一个常量;
+2.

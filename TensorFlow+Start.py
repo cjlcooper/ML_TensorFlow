@@ -34,6 +34,9 @@ def mathFunction():
 		print 'Addition with constants: %i' % sess.run(a+b)
 		print 'Multiplication with constants %i' % sess.run(a*b)
 
+	sess1 = tf.Session()
+	print sess1.run(a-b)
+
 
 addTensor()
 tfSession()
