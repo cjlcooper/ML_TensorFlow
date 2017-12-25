@@ -19,3 +19,7 @@ train_Y = np.asarray([1.7,2.76,2.09,3.19,1.694,1.573,3.366,2.596,2.53,1.221,2.82
 # Shape[0] like kind of count
 n_sample = train_X.shape[0]
 
+# tf placeholder
+# tf Graph Input
+X = tf.placeholder('float')
+Y = tf.placeholder('float')
