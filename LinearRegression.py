@@ -23,3 +23,12 @@ n_sample = train_X.shape[0]
 # tf Graph Input
 X = tf.placeholder('float')
 Y = tf.placeholder('float')
+
+# Create Modle
+
+# Set Modle weights
+W = tf.Variable(rng.randn(), name="weight")
+b = tf.Variable(rng.randn(), name="bias")
+
+print W
+print b
