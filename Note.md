@@ -8,7 +8,7 @@
 
 ### 概览
 TensorFlow是一种将计算表示为图的编程系统。<br/>
-图中的节点称为ops(operation的简称)。<br/>
+图中的节点称为ops(operation的简称),既任务。<br/>
 一个ops使用0个或以上的Tensors，通过执行某些运算，产生0个或以上的Tensors。<br/>
 一个Tensor是一个多维数组，例如，你可以将一批图像表示为一个四维的数组[batch, height, width, channels]，数组中的值均为浮点数。<br/>
 TensorFlow中的图描述了计算过程，图通过Session的运行而执行计算。<br/>
@@ -31,6 +31,7 @@ Session将图的节点们(即ops)放置到计算设备(如CPUs和GPUs)上，然�
 
 ### Tensor
 #### 在Tensorflow中，所有的数据都通过张量的形式表示:
+TensorFlow中使用tensor数据结构（实际上就是一个多维数据）表示所有的数据,并在图计算中的节点之间传递数据;<br/>
 1.零阶张量表示标量，即一个数；<br/>
 2.一阶张量为向量，即一维数组；n阶张量理解为一个n维的数组；<br/>
 3.但是张量不真正的保存数字，它保存的是如何得道这些数字的计算过程，即操作。<br/>
@@ -54,6 +55,14 @@ tf.Variable()<br/>
 3.tf.fill<br/>
 4.tf.constant<br/>
 
+### Fetches（抓取）
+为了抓取ops的输出，需要先执行session的run函数，可通过print函数打印状态信息。<br/>
+所有tensors的输出都是一次性 [连贯] 执行的。<br/>
+
+### Feeds（填充）
+TensorFlow也提供这样的机制：先创建特定数据类型的占位符(placeholder)，之后再进行数据的填充。<br/>
+如果不对placeholder()的变量进行数据填充，将会引发错误。<br/>
+
+
 ### Others
-1.通过tf.constant创建一个常量;
-2.
+1.通过tf.constant创建一个常量;<br/>

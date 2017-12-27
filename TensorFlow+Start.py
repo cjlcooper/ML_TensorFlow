@@ -22,8 +22,16 @@ def tfSession():
 
 #Variable
 def tfVariable():
-	R = tf.Variable(tf.random_normal([2,3],mean=1,stddev=2))
-	print R
+	R = tf.Variable(0, name='counter')
+	one = tf.constant([1,2])
+	two = tf.constant([2,3])
+	new_value = tf.add(R,1)
+	update = tf.assign(R, new_value)
+	with tf.Session() as sess:
+		print sess.run(one+two)
+		#sess.run(new_value)
+		#sess.run(update)
+
 
 # Math function
 def mathFunction():
@@ -38,7 +46,48 @@ def mathFunction():
 	print sess1.run(a-b)
 
 
-addTensor()
-tfSession()
-tfVariable()
-mathFunction()
+# Create Image
+def CreateImage():
+	matrix1 = tf.constant([3,3])
+	matrix2 = tf.constant([2,2])
+	# multiplication
+	product = matrix1+matrix2
+	with tf.Session() as sess:
+		result = sess.run([product])
+		print result
+
+
+
+# Fetches
+def FetchesFunction():
+	print 'Fetches ...'
+	input1 = tf.constant(3.0)
+	input2 = tf.constant(2.0)
+	input3 = tf.constant(5.0)
+	intermed = tf.add(input2,input3)
+	mul = tf.multiply(input1,intermed)
+	# session run
+	with tf.Session() as sess:
+		result = sess.run([mul, intermed])
+		print result
+
+# Feeds
+def FeedsFunction():
+	input1 = tf.placeholder(tf.float32)
+	input2 = tf.placeholder(tf.float32)
+	output = tf.multiply(input1,input2)
+	# session run
+	with tf.Session() as sess:
+		print (sess.run([output], feed_dict={input1:[7.], input2:[2.]}))
+
+
+FeedsFunction()
+
+
+
+
+
+
+
+
+
