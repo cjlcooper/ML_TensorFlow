@@ -74,6 +74,16 @@ TensorFlow也提供这样的机制：先创建特定数据类型的占位符(pla
 曲线直线化是曲线拟合的重要手段之一。对于某些非线性的资料可以通过简单的变量变换使之直线化，这样就可以按最小二乘法原理求出变换后变量的直线方程;<br/>
 既线性回归。<br/>
 
+### tf.train.Optimizer
+定义：优化器类的基类。<br/>
+-> tf.train.GradientDescentOptimizer<br/>
+这个类是实现梯度下降算法的优化器。传入一个学习率的值就可以了：<br/>
+tf.train.GradientDescentOptimizer(learning rate)
+ ### optimizer.minimize()
+作用：非常常用的一个函数,通过更新var_list来减小loss。<br/>
+
+
+
 
 
 
