@@ -2,6 +2,12 @@
 
 TensorFlow很适合用来进行大规模的数值计算。<br/>
 
+## CNN步骤
+- 图像输入（InputImage）
+- 卷积（Convolution）
+- 最大池化（MaxPooling）
+- 全连接神经网络（Fully-ConnectedNeural Network）计算
+
 ### 开启TensorFlow会话
 
 TensorFlow后台计算依赖于高效的C++，与后台的连接称为一个会话(session)。<br/>
